@@ -1,0 +1,178 @@
+body{
+    
+   background: black;
+    /* margin: 35px; */
+    margin-top: 80px;
+   margin-left: 50px;
+   margin-right: 50px;
+   background-image: url("back_dot.png");
+   
+   /* background-image: url(back_dot.png); */
+    /* backface-visibility: hidden; */
+}
+h1{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: center;
+    color: aliceblue;
+    text-align: center;
+    font-size: 50px;
+    
+}
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: left;
+    color: rgb(165, 19, 255);
+    text-align: justify;
+    font-size: 25px;
+    font-style: italic;
+    
+}
+p1{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-display: left;
+color: rgb(249, 249, 249);
+text-align: justify;
+font-size: 17px;
+font-style: normal;
+
+}
+p2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: left;
+    color: rgb(249, 249, 249);
+    text-align: justify;
+    font-size: 17px;
+    font-style: normal;
+    
+}
+p3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: left;
+    color: rgb(249, 249, 249);
+    text-align: justify;
+    font-size: 17px;
+    font-style: normal;
+    
+}
+p4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: left;
+    color: rgb(249, 249, 249);
+    text-align: justify;
+    font-size: 17px;
+    font-style: normal;
+    
+}
+p5{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: left;
+    color: rgb(249, 249, 249);
+    text-align: justify;
+    font-size: 17px;
+    font-style: normal;
+    
+}
+p6{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: left;
+    color: rgb(249, 249, 249);
+    text-align: justify;
+    font-size: 17px;
+    font-style: normal;
+    
+}
+/* p7{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: left;
+    color: rgb(249, 249, 249);
+    text-align: justify;
+    font-size: 17px;
+    font-style: normal;
+    
+}
+p8{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: left;
+    color: rgb(249, 249, 249);
+    text-align: justify;
+    font-size: 17px;
+    font-style: normal;
+    
+} */
+h2{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: center;
+    color: rgb(0, 136, 255);
+    text-align: center;
+    font-size: 30px;
+    
+}
+h3{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: center;
+    color: rgb(0, 136, 255);
+    text-align: center;
+    font-size: 30px;
+    
+}
+h4{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: center;
+    color: rgb(0, 136, 255);
+    text-align: center;
+    font-size: 30px;
+    
+}
+h5{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: center;
+    color: rgb(0, 136, 255);
+    text-align: center;
+    font-size: 30px;
+    
+}
+h6{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: center;
+    color: rgb(0, 136, 255);
+    text-align: center;
+    font-size: 30px;
+    
+}
+/* /* h7{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: center;
+    color: rgb(0, 136, 255);
+    text-align: center;
+    font-size: 30px;
+    
+} */
+h7{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: center;
+    color: rgb(238, 238, 238);
+    text-align: center;
+    font-size: 25px;
+    
+}
+a{
+    color: rgb(0, 119, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    background-color: rgb(237, 244, 248);
+    font-size: large;
+    border-radius: 15px;
+    font-style: normal;
+    padding: 10px 20px;
+    text-decoration: none;
+    float: left;
+
+    
+}

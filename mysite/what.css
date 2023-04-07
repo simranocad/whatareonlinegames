@@ -1,0 +1,190 @@
+body{
+    /* background: linear-gradient(rgb(2, 0, 23), rgb(91, 3, 158)); */
+    
+    /* margin: 35px; */
+  
+  background: black;
+    margin-top: 80px;
+   margin-left: 50px;
+   margin-right: 50px;
+   /* background-image: url(back_dot.png); */
+    /* backface-visibility: hidden; */
+}
+
+h1{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: center;
+    color: aliceblue;
+    text-align: center;
+    font-size: 50px;
+    
+}
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: left;
+    color: rgb(19, 145, 255);
+    text-align: justify;
+    font-size: 17px;
+    font-style: italic;
+    
+}
+p1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-display: left;
+    color: rgb(134, 44, 245);
+    text-align: justify;
+    font-size: 17px;
+    font-style: italic;
+    
+
+}
+h2{
+    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 28px;
+    display: center;
+
+
+    background-color: rgb(20, 20, 20);
+   
+    border-radius: 20px;
+    text-decoration: none;
+    padding: 20px 0px;
+}
+h3{
+    color: rgb(221, 3, 148);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    font-size: 26px;
+    text-align: left;
+    
+    
+        
+}
+p2{
+    color: rgb(216, 216, 216);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    font-size: 17px;
+   
+
+}
+h4{
+    color: rgb(255, 0, 123);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    font-size: 26px;
+    
+}
+p3{
+    color:rgb(141, 141, 141);
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+}
+
+h5{
+    color: rgb(7, 137, 250);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: larger;
+}
+img{
+     float: right;
+     margin-top: 100px;
+     margin-right: 40px;
+     
+}
+.img2{
+    
+    float: left;
+    position: relative;
+    
+}
+h6{
+    color: rgb(237, 238, 239);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    font-size: 28px;
+    background-color: rgb(45, 45, 45);
+    border-radius: 20px;
+    text-decoration: none;
+
+}
+/* h6:hover{
+    background-color:rgb(0, 78, 167);
+    font-size: 32px;
+    text-align: left;
+    color: white;
+    text-decoration: none; */
+
+.img3{
+    padding-left: 20px;
+    padding-right: 140px;
+    padding-top: 0px;
+    
+}
+/* h7{
+    color: rgb(9, 128, 248);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: right;
+    font-size: 32px;
+
+    
+
+} */
+p4{
+    color: rgb(141, 141, 141);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* float: left; */
+    font-size: 17px;
+    text-align: start;
+    
+}
+p5{
+    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: left;
+    font-size: 30px;
+    text-align: start;
+    font-weight: bolder;
+    
+    
+}
+a{
+    color: rgb(0, 119, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    background-color: rgb(237, 244, 248);
+    font-size: large;
+    border-radius: 15px;
+    font-style: normal;
+    padding: 10px 20px;
+    text-decoration: none;
+    float: left;
+
+    
+}
+
+
+a:hover{
+    background-color:rgb(0, 77, 177);
+    float: left;
+    font-size: x-large;
+    color: white;
+    text-decoration: none;
+}
+h7{
+    float: center;
+    color: rgb(237, 238, 239);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    font-size: xx-large;
+    background-color: rgb(0, 145, 255);
+
+    border-radius: 20px;
+    text-decoration: none;
+    padding: 8px 10px;
+}

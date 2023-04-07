@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="learn.css">
+<title>what are circle games</title>
+
+
+</head>
+<body>
+    
+    
+    <!-- <img src="circle_web.png" width="620" height="300" class="img">  -->
+     
+<h1>HOW TO MAKE CRAZYY CIRCLES ?</h1>
+<p>Following Instructions is how you make this game. Follow the Steps!</p>
+<br>
+
+<h7> JAVA SCRIPT CODE:</h7>
+<!-- <p1>Simply roll around as a circle on the two games created, crushing your opponents by using keys and collecting larger circles to beat the score. Browse through my cool collection of Circle Games that I designed, pick your personal best, and have a great time. When you're done, just start over since a circle has no endpoint. Isn't that amazing? Have fun with my two fantastic games, Circle Rush and Crazy Circles.</p1> -->
+<h2>Step 1: Creation of Canvas</h2>
+
+<p1>1- &nbsp;&nbsp;A variable canvas is created and assigned the value of the HTML element with the ID canvas1.<br>
+    2- &nbsp;&nbsp;The getContext() method is called on the canvas variable, passing in the argument '2d' to get a two-dimensional rendering context for the canvas.<br>
+    3- &nbsp;&nbsp;The width and height properties of the canvas variable are set to 800 and 500 pixels respectively. <br>
+    <br>
+    <br>
+    <br>
+    const canvas = document.getElementById('canvas1');<br>
+    const ctx = canvas.getContext('2d');<br>
+   <br>
+    canvas.width = 800;<br>
+    canvas.height = 500;</p1>
+
+    <h2>Step 2: Add Score and Font and Position it</h2>
+    <p2>1- &nbsp;&nbsp;A variable score is created and assigned a value of 0.<br>
+        2- &nbsp;&nbsp;A variable gameFrame is created and assigned a value of 0.<br>
+        3- &nbsp;&nbsp;The font property of the ctx variable (the rendering context for the canvas) is set to "bold 22px Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif".<br>
+        4- &nbsp;&nbsp;The canvasPosition variable is created using the getBoundingClientRect() method on the canvas element, which gets the size and position of the canvas relative to the viewport.
+        <br>
+        <br>
+        <br>let score = 0;<br>
+        let gameFrame = 0;<br>
+        ctx.font = "bold 22px Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif";
+        <br>
+        
+        
+        
+        let canvasPosition = canvas.getBoundingClientRect();</p2>
+
+<h3>Step 3: Mouse Command </h3>
+<p3>1- &nbsp;&nbsp;Mouse object is created with properties x, y, and click.<br>
+    2- &nbsp;&nbsp;An event listener is added to the canvas element for a mousedown event, which sets the click property of the mouse object to true and updates the x and y properties of the mouse object to the position of the mouse click on the canvas.<br>
+    3- &nbsp;&nbsp;Another event listener is added to the canvas element for a mouseup event, which sets the click property of the mouse object to false.
+    <br>
+    <br>
+    <br>const mouse = { <br>
+    x: canvas.width/2,<br>
+    y: canvas.height/2,<br>
+    click: false<br>
+}<br>
+canvas.addEventListener('mousedown', function(event){<br>
+    mouse.click = true;<br>
+    mouse.x = event.x - canvasPosition.left;<br>
+    mouse.y = event.y - canvasPosition.top;<br>
+    <br>
+   
+});
+canvas.addEventListener('mouseup', function(){<br>
+    mouse.click = false;<br>
+})<br></p3>
+
+<h4>Step 4: Construction of PLayer 1</h4>
+<p4>1- &nbsp;&nbsp;A Player class is created with properties x, y, radius, angle, frameX, frameY, frame, spriteWidth, and spriteHeight.<br>
+    2- &nbsp;&nbsp;The update() method of the Player class is defined to update the x and y properties of the player object based on the position of the mouse on the canvas.<br>
+    3- &nbsp;&nbsp;The draw() method of the Player class is defined to draw a circle representing the player on the canvas and a line from the player to the position of the mouse if the click property of the mouse object is true.<br>
+    <br>
+    <br>
+    <br>
+    class Player{<br>
+    constructor(){<br>
+        this.x = canvas.width/2;<br>
+        this.y = canvas.height/2;<br>
+        this.radius = 20;<br>
+        this.angle = 0;<br>
+        this.frameX = 0;<br>
+        this.frameY = 0;<br>
+        this.frame = 0;<br>
+        this.spriteWidth = 498;<br>
+        this.spriteHeight = 327;<br>
+    }<br>
+    update(){<br>
+        const dx = this.x - mouse.x;<br>
+        // console.log(canvas.width, mouse.x);<br>
+        const dy = this.y - mouse.y;<br>
+        if (mouse.x != this.x) {<br>
+            this.x -= dx/10;<br>
+        }<br>
+        if (mouse.y != this.y) {<br>
+            this.y -= dy/10;<br>
+        }<br>
+    }<br>
+    draw(){<br>
+        if(mouse.click) {<br>
+            ctx.lineWidth = 0.3;<br>
+            ctx.beginPath();<br>
+            ctx.moveTo(this.x, this.y);<br>
+            ctx.lineTo(mouse.x, mouse.y);<br>
+            ctx.stroke();<br>
+        }<br>
+        ctx.fillStyle = '#0378ff';<br>
+        ctx.beginPath();<br>
+        ctx.arc (this.x, this.y, this.radius, 0, Math.PI * 2);<br>
+        ctx.fill();<br>
+        ctx.closePath();<br>
+        ctx.fillRect(this.x,this.y,this.radius, 5);<br>
+    }
+}<br></p4>
+
+
+<h5>Step 5: Construction of Enemy Players</h5>
+
+<p5>1- &nbsp;&nbsp;An instance of the Player class is created and assigned to the player variable.<br>
+    2- &nbsp;&nbsp;An empty array bubblesArray is created.<br>
+    3- &nbsp;&nbsp;A Bubble class is created with properties x, y, radius, speed, distance, counted, and sound.<br>
+    4- &nbsp;&nbsp;The update() method of the Bubble class is defined to update the y property of the bubble object to simulate its movement on the canvas and calculate the distance between the bubble and the player.<br>
+    5- &nbsp;&nbsp;The draw() method of the Bubble class is defined to draw a circle representing the bubble on the canvas.
+    <br>
+    <br>
+    <br>
+    const player = new Player();<br>
+
+    const bubblesArray = [];<br>
+    class Bubble {<br>
+        constructor(){<br>
+            this.x = Math.random() * canvas.width;<br>
+            this.y = canvas.height + 100;<br>
+            this.radius = 65;<br>
+            this.speed = Math.random() * 5 + 1;<br>
+            this.distance;<br>
+            this.counted = false; <br>
+            this.sound = Math.random() = 0.5 ? 'sound1' : 'sound2';<br>
+    
+        }<br>
+        update(){<br>
+            this.y -= this.speed;<br>
+            const dx = this.x - player.x;<br>
+            const dy = this.y - player.y;<br>
+            this.distance = Math.sqrt(dx*dx + dy*dy);<br>
+        }<br>
+        draw(){<br>
+            ctx.fillStyle = '#ff03e2';<br>
+            ctx.beginPath();<br>
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI *2);<br>
+            ctx.fill();<br>
+            ctx.closePath();<br>
+            ctx.stroke();<br>
+        }
+    }<br></p5>
+
+<h6>Step 6: Adding sound effects and Motion to Enemy bubbles and Player </h6>
+<p6>1- &nbsp;&nbsp;Two audio elements bubblePop1 and bubblePop2 are created and assigned audio file sources.<br>
+    2- &nbsp;&nbsp;The handleBubbles() function is defined to update and draw the bubbles on the canvas, check for collisions with the player, and play sound effects and increment score when a collision occurs.<br>
+    3- &nbsp;&nbsp;The animate() function is defined to clear the canvas, update and draw the bubbles and player, display the score.
+    <br>
+    <br>
+    <br>
+    const bubblePop1 = document.createElement('audio');<br>
+    bubblePop1.src = 'p_1.ogg';<br>
+    const bubblePop2 = document.createElement('audio');<br>
+    bubblePop2.src = 'p_2.ogg';<br>
+    <br>
+    function handleBubbles(){<br>
+    if (gameFrame % 50 == 0){<br>
+        bubblesArray.push(new Bubble());<br>
+        // console.log(bubblesArray.length);<br>
+    }<br>
+    for(let i = 0; i  bubblesArray.length; i++){<br>
+        bubblesArray[i].update();<br>
+        bubblesArray[i].draw();<br>
+        
+    }<br>
+    for (let i = 0; i  bubblesArray.length; i++){<br>
+        if (bubblesArray[i].y  0 - bubblesArray[i].radius * 2){<br>
+            bubblesArray.splice(i, 1);<br>
+        }<br>
+        if (bubblesArray[i].distance  bubblesArray[i].radius + player.radius){<br>
+            // (console.log('collision'));<br>
+            if (!bubblesArray[i].counted){<br>
+            if(bubblesArray[i].sound == 'sound1'){<br>
+                bubblePop1.play();<br>
+            } else{<br>
+                bubblePop2.play();<br>
+            }<br>
+                score++;<br>
+                bubblesArray[i].counted = true;<br>
+                bubblesArray.splice(i, 1);<br>
+            }<br>
+    }<br>
+  }<br>
+} <br>       
+
+function animate(){<br>
+    ctx.clearRect(0, 0, canvas.width, canvas.height);<br>
+    handleBubbles();<br>
+    player.update();<br>
+    player.draw();<br>
+    ctx.fillStyle = '#fffcfc';<br>
+    
+    
+
+    ctx.fillText('SCORE: ' + score, 10 , 30);<br>
+    gameFrame++;<br>
+    requestAnimationFrame(animate);<br>
+
+}<br>
+animate();<br>
+</p6>
+
+
+<!-- <img src="crazyycirclepink1.png" width="390" height="250" class="img2"> <br> -->
+<br>
+<br>
+<br>
+
+
+<!-- <a href="what.html" class="active">CLICK TO GO BACK</a> -->
+<br>
+<br>
+<br>
+<br>
+<!-- <h6>HELLO, I'M CRAZY CIRCLE 1</h6> -->
+</body>
+</html>
